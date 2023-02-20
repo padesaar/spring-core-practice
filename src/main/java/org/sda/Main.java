@@ -1,6 +1,7 @@
 package org.sda;
 
 import org.sda.beans.MyBean;
+import org.sda.beans.MyBook;
 import org.sda.beans.SecondName;
 import org.sda.configuration.ApplicationConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -23,5 +24,7 @@ public class Main {
         myBean.setName(new SecondName());
         System.out.println(myBean.sayHello());
 
+        MyBook myBook = applicationContext.getBean(MyBook.class);
+        System.out.println(myBook.bookTitle());
     }
 }
